@@ -27,6 +27,6 @@ console.log(`Температура ${celsiusDegree}°C складає ${fahrenh
 // Завдання: Напишіть програму, яка обчислює об'єм циліндра за формулою V=π×r2×hV = \pi \times r^2 \times h V=π×r2×h, де r — радіус, а h — висота. Виведіть результат у консоль.
 let r = Number(prompt(`Введіть радіус циліндра: `));
 let h = Number(prompt(`Введіть висоту циліндра: `));
-const Pi = 3.14;
-let V = Pi *(r**2)*h;
+const PI = 3.14;
+let V = PI *(r**2)*h;
 console.log(`Об'єм даного циліндра складає ${V}`);
