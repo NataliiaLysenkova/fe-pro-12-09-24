@@ -142,3 +142,5 @@ function calculateSum(array) {
 
 let sumOfArrays = arrayOfArrays.map((array) => calculateSum(array));
 console.log(sumOfArrays);
+let sumsOfArrays = arrayOfArrays.map((array) => [calculateSum(array)]);
+console.log(sumsOfArrays); //  масив з масивами сум
