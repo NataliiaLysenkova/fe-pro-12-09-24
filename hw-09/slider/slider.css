@@ -1,0 +1,108 @@
+.movies {
+  overflow: hidden;
+  padding: 20px;
+  background-color: #131111;
+  color: #fff;
+}
+
+.m-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 18px;
+}
+
+.m-heading h4 {
+  font-size: 1.375rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.c-wrapper {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.control {
+  width: 2.563rem;
+  height: 2.563rem;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background: transparent;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.control:hover,
+.control.active {
+  opacity: 1;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 1rem;
+  color: #fff;
+  animation: fade 2s infinite;
+  opacity: 0.6;
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.m-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.poster {
+  width: 20%; /* Початкова ширина */
+  height: 250px; /* Фіксована висота */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.poster img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 1200px) {
+  .poster {
+    width: 25%;
+  }
+}
+
+@media (max-width: 992px) {
+  .poster {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .poster {
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .poster {
+    width: 100%;
+  }
+}
