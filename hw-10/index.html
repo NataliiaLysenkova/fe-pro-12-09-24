@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p class="text">Цей текст змінює колір!</p>
+      <p class="text">І цей текст також!</p>
+      <p class="text">А ще цей текст!</p>
+      <button class="change-color-btn">Змінити колір тексту</button>
+
+      <p class="counter">Лічильник: <span id="count">0</span></p>
+      <button class="increment-btn">Збільшити на 1</button>
+
+      <button id="generate-btn">Додати елементи</button>
+      <div class="generated-elements"></div>
+
+      <div class="blockContainer">
+        <button class="button first">Перша кнопка</button>
+        <button class="button second">Друга кнопка</button>
+        <button class="button third">Третя кнопка</button>
+      </div>
+
+      <button class="menu-button" onclick="toggleMenu()">Відкрити меню</button>
+      <ul class="menu">
+        <li><a href="#">Головна</a></li>
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">Послуги</a></li>
+        <li><a href="#">Контакти</a></li>
+      </ul>
+
+      <div class="resizeable-box"></div>
+    </div>
+
+    <script src="script/main.js"></script>
+  </body>
+</html>
