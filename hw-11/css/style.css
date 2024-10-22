@@ -1,0 +1,37 @@
+.colorful-div {
+  width: 12rem;
+  height: 10rem;
+  margin: 20px auto;
+  padding: 5%;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: rgb(123, 16, 46);
+  color: rgb(255, 255, 255);
+}
+
+.text-block {
+  width: 70%;
+  margin: 30px auto;
+  line-height: 1.5;
+}
+
+.custom-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #eee;
+}
