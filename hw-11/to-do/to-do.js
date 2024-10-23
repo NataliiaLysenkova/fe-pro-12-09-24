@@ -1,6 +1,7 @@
 let taskInput = document.getElementById('task-input');
 let addBtn = document.getElementById('add-btn');
 let taskList = document.querySelector('.task-list');
+let todoItems = [];  // Масив для зберігання задач
 
 // Обробка натискання на кнопку додавання задачі
 addBtn.addEventListener('click', function () {
@@ -17,6 +18,10 @@ addBtn.addEventListener('click', function () {
     taskItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
     taskItem.textContent = taskValue;
 
+    // Додавання задачі в масив
+    todoItems.push(taskValue);
+    console.log("Поточний список задач:", todoItems);
+
     // Створення кнопки для видалення задачі
     let deleteBtn = document.createElement('button');
     deleteBtn.classList.add('btn', 'btn-danger', 'btn-sm');
@@ -24,13 +29,21 @@ addBtn.addEventListener('click', function () {
 
     // Додавання події для видалення задачі
     deleteBtn.addEventListener('click', function () {
+        // Знайти індекс задачі
+        let index = todoItems.indexOf(taskValue);
+        if (index !== -1) {
+            todoItems.splice(index, 1);  // Видалити елемент із масиву
+            console.log("Список задач після видалення:", todoItems);
+        }
+
+        // Видалити елемент зі списку на сторінці
         taskList.removeChild(taskItem);
     });
 
     // Додавання кнопки видалення до елемента задачі
     taskItem.appendChild(deleteBtn);
 
-    // Додавання елемента задачі до списку
+    // Додавання елемента задачі до списку на сторінці
     taskList.appendChild(taskItem);
 
     // Очищення поля введення після додавання задачі
