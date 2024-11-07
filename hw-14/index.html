@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6">
+          <h2 class="heading pb-2">String Transformation to Uppercase</h2>
+          <div class="mb-3">
+            <label class="form-label">Enter Text</label>
+            <input
+              type="text"
+              class="form-control input-text"
+              placeholder="Type your text here..."
+            />
+          </div>
+          <button class="btn btn-primary transform-btn">
+            Transform to Uppercase
+          </button>
+          <div class="mt-3">
+            <h5>Result:</h5>
+            <p class="alert alert-secondary result-text"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6">
+          <h1 class="text-center mb-4">User List</h1>
+          <div id="user-list" class="row row-cols-1 row-cols-md-2 g-4"></div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-3">
+        <div class="col-sm-12 col-md-6">
+          <h1 class="text-center mb-4">Star Wars Planets</h1>
+          <div class="text-center">
+            <button id="fetch-planets" class="btn btn-primary mb-4">
+              Load Planets
+            </button>
+          </div>
+          <div id="planet-list" class="row row-cols-1 row-cols-md-2 g-4"></div>
+        </div>
+
+        <!-- Modal for additional information about the planet -->
+        <div
+          class="modal fade"
+          id="planetModal"
+          tabindex="-1"
+          aria-labelledby="planetModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="planetModalLabel">
+                  Planet Information
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body" id="planet-details">
+                <!-- Additional information about the planet will be uploaded here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script/main.js"></script>
+  </body>
+</html>
